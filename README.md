@@ -12,4 +12,16 @@ creates reported "true" and "false" segments, along with reporting accuracy, pow
 format: python src/construct_dataset_v2.py <unsmoothed vcf> <smoothed vcf> <ground truth segments> <"true" reported segments> <"false" reported segments> <n_chunks> <rate_map_file>  <output file name>
 
 
+Dependencies
+Python
+- tskit
+- msprime
+- numpy
+- tqdm
+- stdpopsim
+
+Other
+- bcftools
+
+
 
