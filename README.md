@@ -9,7 +9,10 @@ run src/findFalseIBDs.sh with the hap-IBD results and the hap-IBD + P_smoother r
 format: src/findFalseIBDs.sh <reported output> <ground truth segments> <centimorgan cutoff> <threshold for falseness>
 creates reported "true" and "false" segments, along with reporting accuracy, power, extraction
 
-format: python src/construct_dataset_v2.py <unsmoothed vcf> <smoothed vcf> <ground truth segments> <"true" reported segments> <"false" reported segments> <n_chunks> <rate_map_file>  <output file name>
+format: python src/constructDataset.py <unsmoothed vcf> <smoothed vcf> <ground truth segments> <"true" reported segments> <"false" reported segments> <n_chunks> <rate_map_file>  <output file name>
+
+#### to get the boosted segments, run:
+python src/segmentAugmentation.py <constructed_dataset>
 
 
 Dependencies
@@ -19,6 +22,9 @@ Python
 - numpy
 - tqdm
 - stdpopsim
+- pytorch
+- XGBoost
+- pandas
 
 Other
 - bcftools
