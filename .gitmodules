@@ -1,0 +1,3 @@
+[submodule "src/hap-ibd-cpp"]
+	path = src/hap-ibd-cpp
+	url = https://github.com/amercadel/hap-ibd-cpp.git
