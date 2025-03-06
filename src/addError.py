@@ -1,9 +1,5 @@
-# impute_error2.py has a mistake. I implanted the genotyping error on the whole set all alleles, when I should
-# have been going individual by individual and implanting the error that way
-import random
-import sys
-import os
 from collections import defaultdict
+import random
 
 
 class error_imputer:
