@@ -2,7 +2,7 @@ import os
 import subprocess
 import tskit
 import sys
-from implantVariedGenotypingError import error_imputer, implant_error
+from addErrorVaried import error_imputer, implant_error
 
 
 

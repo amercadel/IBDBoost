@@ -39,7 +39,7 @@ default_cm_cutoff=1.7
 
 python src/ibd_inference.py $processed_vcf $rate_map_file # runs hap-IBD and P-smoother
 
-python extract_gt.py $ts_name $rate_map_file $default_cm_cutoff $n_cpus_gt_extraction # a little convoluted, but this is a python script to generate the shell script to extract the ground truth segments
+python extractGT.py $ts_name $rate_map_file $default_cm_cutoff $n_cpus_gt_extraction # a little convoluted, but this is a python script to generate the shell script to extract the ground truth segments
 ./gt_extraction.sh
 
 # now you have the ground truth segments, hap-ibd output, and hap-ibd + p-smoother output, and can use the files in the construction_dataset_files folder

@@ -2,7 +2,7 @@ import os
 import subprocess
 import tskit
 import sys
-from implantErrors import implant_error, error_imputer
+from addError import implant_error, error_imputer
 
 
 
