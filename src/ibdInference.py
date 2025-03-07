@@ -4,7 +4,7 @@ import subprocess
 import time
 import numpy as np
 from convertHapMapToPLINK import convert
-from p_smoother_eval import *
+from PSmootherEvaluation import *
 
 
 

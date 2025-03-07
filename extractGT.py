@@ -26,7 +26,7 @@ def main():
     indices = generate_chunks(n_cpus, n_samples)
     f = open("gt_extraction.sh", "w+")
     for i in range(len(indices)):
-        string = f"nohup python src/extract_true_IBDs_subset.py {ts_path} {indices[i][0]} {indices[i][1]} {genetic_map_file} {min_cutoff} &\n"
+        string = f"nohup python src/extractTrueIBDs.py {ts_path} {indices[i][0]} {indices[i][1]} {genetic_map_file} {min_cutoff} &\n"
         f.write(string)
         f.write(f"PID{i}=$!\n")
     f.write("\n")
