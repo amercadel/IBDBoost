@@ -37,7 +37,7 @@ processed_vcf=$last_part
 
 default_cm_cutoff=1.7
 
-python src/ibd_inference.py $processed_vcf $rate_map_file # runs hap-IBD and P-smoother
+python src/ibdInference.py $processed_vcf $rate_map_file # runs hap-IBD and P-smoother
 
 python extractGT.py $ts_name $rate_map_file $default_cm_cutoff $n_cpus_gt_extraction # a little convoluted, but this is a python script to generate the shell script to extract the ground truth segments
 ./gt_extraction.sh
