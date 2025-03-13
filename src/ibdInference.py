@@ -125,16 +125,16 @@ def main():
     ps_obj.run(f"{processed_vcf_name}.vcf", rate_map_file)
     e = time.time()
     print(f"{e - s} seconds to run P-smoother")
-    # hap_ibd_obj = hap_ibd("src/hap-ibd.jar")
-    # if rate_map_is_plink == False:
-    #     rate_map_file = convert(rate_map_file)
-    # print("Running hap-IBD...")
-    # hap_ibd_obj.run(f"{processed_vcf_name}.smooth.vcf", rate_map_file, "hap_ibd_p_smoother_results")
-    # hap_ibd_obj.run(f"{processed_vcf_name}.vcf", rate_map_file, "hap_ibd_results")
-    # if rate_map_is_plink == False:
-    #     subprocess.run(["rm", rate_map_file])
-    # subprocess.run(["gunzip", "hap_ibd_p_smoother_results.ibd.gz"])
-    # subprocess.run(["gunzip", "hap_ibd_results.ibd.gz"])
+    hap_ibd_obj = hap_ibd("src/hap-ibd.jar")
+    if rate_map_is_plink == False:
+        rate_map_file = convert(rate_map_file)
+    print("Running hap-IBD...")
+    hap_ibd_obj.run(f"{processed_vcf_name}.smooth.vcf", rate_map_file, "hap_ibd_p_smoother_results")
+    hap_ibd_obj.run(f"{processed_vcf_name}.vcf", rate_map_file, "hap_ibd_results")
+    if rate_map_is_plink == False:
+        subprocess.run(["rm", rate_map_file])
+    subprocess.run(["gunzip", "hap_ibd_p_smoother_results.ibd.gz"])
+    subprocess.run(["gunzip", "hap_ibd_results.ibd.gz"])
     
 
 
